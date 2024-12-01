@@ -66,8 +66,11 @@ class crud : AppCompatActivity() {
                 //confirmacion al insertar dato
             }
 
-
         }
 
+        binding.btnVer.setOnClickListener{
+            val intent = Intent(this, verPulsaciones::class.java)
+            startActivity(intent)
+        }
     }
 }

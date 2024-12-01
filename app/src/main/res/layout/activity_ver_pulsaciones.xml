@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
-xmlns:tools="http://schemas.android.com/tools"
-xmlns:android="http://schemas.android.com/apk/res/android"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-android:orientation="vertical"
-tools:context=".verPulsaciones"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".verPulsaciones"
+    android:id="@+id/main"
     >
 
 <TextView
@@ -16,13 +17,12 @@ tools:context=".verPulsaciones"
     android:layout_gravity="center_horizontal"
     android:textAppearance="@style/TextAppearance.Material3.HeadlineLarge"/>
 
-<androidx.recyclerview.widget.RecyclerView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:id="@+id/rvPulsaciones"
-    android:layout_margin="30dp"
-    />
-
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvPulsaciones"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="30dp"
+        tools:listitem="@layout/item_pulsaciones" />
 
 
 </LinearLayout>
