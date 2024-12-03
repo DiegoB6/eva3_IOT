@@ -1,84 +1,176 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".crud">
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:id="@+id/main"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".crud"
+android:background="@drawable/gradiente"
+    >
+
+<androidx.appcompat.widget.Toolbar
+    android:id="@+id/toolbar"
+    android:layout_width="0dp"
+    android:layout_height="80dp"
+    android:background="@color/indigo"
+    android:elevation="4dp"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent">
 
 
     <TextView
         android:id="@+id/tvTitulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Ingresar Datos"
-        android:textAppearance="@style/TextAppearance.Material3.HeadlineLarge"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="50dp"
+        android:text="@string/mi_salud"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:layout_gravity="center"
         />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/tilPulsaciones"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="30dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="30dp"
-        android:hint="Pulsaciones por Minuto"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvTitulo">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etPulsaciones"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/tilOxigeno"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="30dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="30dp"
-        android:hint="Porcentaje de Oxigeno en sangre"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tilPulsaciones">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etOxigeno"
-            android:inputType="number"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-    </com.google.android.material.textfield.TextInputLayout>
+</androidx.appcompat.widget.Toolbar>
 
 
-    <Button
+    <TextView
+        android:textSize="35sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_marginBottom="540dp"
+        android:id="@+id/tvCrud"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Guardar producto"
-        android:id="@+id/btnGuardar"
-        app:layout_constraintTop_toBottomOf="@id/tilOxigeno"
-        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/ingresar_datos"
+        android:textAppearance="@style/TextAppearance.Material3.HeadlineLarge"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="50dp"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 
-    <Button
-        android:layout_width="wrap_content"
+<com.google.android.material.textfield.TextInputLayout
+    app:startIconTint="@color/white"
+    app:boxBackgroundMode="outline"
+    app:boxStrokeColor="@color/white"
+    android:textColorHint="@color/white"
+    app:endIconTint="@color/white"
+    android:id="@+id/tilPulsaciones"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="30dp"
+    android:layout_marginStart="30dp"
+    android:layout_marginTop="50dp"
+    android:layout_marginEnd="30dp"
+    android:hint="@string/pulsaciones_por_minuto"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/tvCrud">
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:textColor="@color/white"
+        android:id="@+id/etPulsaciones"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</com.google.android.material.textfield.TextInputLayout>
+
+<com.google.android.material.textfield.TextInputLayout
+    android:id="@+id/tilOxigeno"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="30dp"
+    android:layout_marginStart="30dp"
+    android:layout_marginTop="15dp"
+    android:layout_marginEnd="30dp"
+    android:hint="@string/porcentaje_de_oxigeno_en_sangre"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/tilPulsaciones"
+    app:startIconTint="@color/white"
+    app:boxBackgroundMode="outline"
+    app:boxStrokeColor="@color/white"
+    android:textColorHint="@color/white"
+    app:endIconTint="@color/white">
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/etOxigeno"
+        android:inputType="number"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Ver Datos"
-        android:id="@+id/btnVer"
-        app:layout_constraintTop_toBottomOf="@id/btnGuardar"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="@color/white"/>
+</com.google.android.material.textfield.TextInputLayout>
+
+
+<Button
+
+    android:backgroundTint="@color/indigo"
+    android:textColor="@color/black"
+
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/guardar_datos"
+    android:id="@+id/btnGuardar"
+    app:layout_constraintTop_toBottomOf="@id/tilOxigeno"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:layout_marginTop="50dp"/>
+
+<Button
+    android:backgroundTint="@color/indigo"
+    android:textColor="@color/black"
+
+
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/ver_datos"
+    android:id="@+id/btnVer"
+    app:layout_constraintTop_toBottomOf="@id/btnGuardar"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:layout_marginTop="20dp"/>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginBottom="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="50dp"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnVer">
+
+        <com.google.android.material.button.MaterialButton
+            android:backgroundTint="@color/green"
+            android:textColor="@color/indigo"
+            app:strokeColor="@color/black"
+            app:strokeWidth="1dp"
+
+            android:id="@+id/btnCambiarPassword"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/cambiar_contrase_a"
+            android:layout_marginHorizontal="20dp"
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:backgroundTint="@color/red"
+            android:textColor="@color/indigo"
+            app:strokeColor="@color/black"
+            app:strokeWidth="1dp"
+
+            android:id="@+id/btnLogout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/cerrar_sesi_n"
+            android:layout_marginHorizontal="20dp"
+            />
+    </LinearLayout>
 
 
 

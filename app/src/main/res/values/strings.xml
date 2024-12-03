@@ -2,4 +2,35 @@
     <string name="app_name">evaluacion3</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="manual">Para comenzar a utilizar la aplicacion debe ir al boton Iniciar Sesion de la barra inferior y luego presionar el boton Ingresar.
+    \nUna vez en la pantalla de Login ingrese su correo y contraseña, (un usuario de prueba es: mario@login.cl, contraseña: mario12345) si no tiene un usuario debe crear uno haciendo click en la palabra REGISTRATE.
+        \nSi inicio sesion correctamente estará en la pagina de Ingresar Datos, donde podra realizar diferentes funcinalidades, la principal funcionalidad es la de ingresar datos, en donde debe ingresar las pulsaciones y el nivel de oxigeno para luego hacer click en el boton Guardar Datos.
+        \nSi desea ver los datos ingresados haga click en el boton Ver Datos.
+        \nEn esta pagina tambien puede cambiar su contraseña presonando el boton verde, el cual lo llevara a un formulario para realizar el cambio
+        \nFinalmente esta el boton rojo para cerrar sesion, el cual luego de presionarlo volvera a la pagina de Login para ingresar nuevamente.
+    </string>
+    <string name="manual_de_uso">Manual de uso</string>
+    <string name="mi_salud">Mi salud</string>
+    <string name="iniciar_sesion">Iniciar Sesion</string>
+    <string name="ingrese_sus_datos_para_usar_la_aplicacion">Ingrese sus datos para usar la aplicacion</string>
+    <string name="ingresar">Ingresar</string>
+    <string name="en_esta_aplicacion_podr_s_medir_tu_calidad_de_vida">En esta aplicacion podrás medir tu calidad de vida</string>
+    <string name="atrasver">atrasVer</string>
+    <string name="lista_de_datos">Lista de Datos</string>
+    <string name="registrar_usuario">Registrar Usuario</string>
+    <string name="correo_electronico">Correo Electronico</string>
+    <string name="contrase_a">Contraseña</string>
+    <string name="confirmar_contrase_a">Confirmar Contraseña</string>
+    <string name="login">Login</string>
+    <string name="no_estas_registrado_registrate">¿No estas registrado?: REGISTRATE</string>
+    <string name="ingresar_datos">Ingresar Datos</string>
+    <string name="pulsaciones_por_minuto">Pulsaciones por Minuto</string>
+    <string name="porcentaje_de_oxigeno_en_sangre">Porcentaje de Oxigeno en sangre</string>
+    <string name="guardar_datos">Guardar Datos</string>
+    <string name="ver_datos">Ver Datos</string>
+    <string name="cambiar_contrase_a">Cambiar contraseña</string>
+    <string name="cerrar_sesi_n">Cerrar Sesión</string>
+    <string name="nueva_contrase_a">Nueva Contraseña...</string>
+    <string name="repite_nueva_contrase_a">Repite Nueva Contraseña...</string>
+    <string name="guardar_cambios">Guardar Cambios</string>
 </resources>
